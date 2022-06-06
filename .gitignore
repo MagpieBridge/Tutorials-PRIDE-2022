@@ -1,0 +1,12 @@
+
+.DS_Store
+.idea/
+dependency-reduced-pom.xml
+magpie_server_trace.lsp
+target
+*.iml
+*.vsix
+vscode/node_modules/
+vscode/out/
+vscode/*.jar
+testProject/target/maven*

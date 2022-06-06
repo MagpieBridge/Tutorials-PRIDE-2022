@@ -1,0 +1,21 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "extensionHost",
+            "request": "launch",
+            "name": "Launch extended VS Code",
+            "runtimeExecutable": "${execPath}",
+            "args": [
+                "--extensionDevelopmentPath=${workspaceFolder}"
+            ],
+            "outFiles": [
+                "${workspaceFolder}/client/out/**/*.js"
+            ],
+            "preLaunchTask":{
+                "type": "npm",
+                "script": "compile"
+            }
+        }
+    ]
+}

@@ -1,0 +1,60 @@
+{
+	"name": "HelloWorld",
+	"description": "A HelloWorld example with MagpieBridge",
+	"author": "Linghui Luo ",
+	"license": "EPL-2.0",
+	"version": "0.0.2",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/MagpieBridge/Tutorials.git"
+	},
+	"publisher": "linghui-luo",
+	"categories": [],
+	"keywords": [
+		"multi-root ready"
+	],
+	"engines": {
+		"vscode": "^1.30.0"
+	},
+	"activationEvents": [
+		"onLanguage:java"
+	],
+	"main": "./out/extension",
+	"contributes": {
+		"configuration": {
+			"type": "object",
+			"title": "HelloWorld",
+			"properties": {
+				"HelloWorld.trace.server": {
+					"scope": "window",
+					"type": "string",
+					"enum": [
+						"off",
+						"messages",
+						"verbose"
+					],
+					"default": "off",
+					"description": "Traces the communication between VS Code and the language server."
+				}
+			}
+		}
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -b",
+		"watch": "tsc -b -w",
+		"postinstall": "node ./node_modules/vscode/bin/install"
+	},
+	"dependencies": {
+		"vsce": "^2.6.7",
+		"vscode-languageclient": "^5.2.1",
+		"xmlhttprequest-ts": "^1.0.1"
+	},
+	"devDependencies": {
+		"@types/mocha": "^5.2.6",
+		"@types/node": "^11.13.0",
+		"tslint": "^5.15.0",
+		"typescript": "^3.4.2",
+		"vscode": "^1.1.33"
+	}
+}
