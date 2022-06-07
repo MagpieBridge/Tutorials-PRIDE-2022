@@ -3,6 +3,7 @@ Make sure you have the following software installed
 - Maven
 - Java 8
 - Node 14
+- VS Code
 
 # Structure
 - `src`: tutorial code of a MagpieBridge-based server. 
